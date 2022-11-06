@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Baitapjs78</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      h5 {
+        color: #004085;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="pt-5 col-4">
+          <div class="card">
+            <div class="card-header text-center alert-primary text-uppercase">
+              <h5>In số nguyên tố</h5>
+            </div>
+            <div class="card-body py-4 d-flex">
+              <div class="form-group pr-5">
+                <input
+                  id="number"
+                  type="number"
+                  class="form-control"
+                  placeholder="Nhập số n"
+                />
+              </div>
+              <div class="text-center">
+                <button
+                  id="btnSonguyento"
+                  class="btn btn-primary"
+                  onclick="BT78()"
+                >
+                  Thêm số
+                </button>
+              </div>
+            </div>
+            <div id="themSo" class="card-footer alert-primary"></div>
+          </div>
+        </div>
+        <div class="pt-5 col-5 ml-5 pl-5">
+          <!--Accordion wrapper-->
+          <div
+            class="accordion md-accordion"
+            id="accordionEx"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <!-- Accordion card 1-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingOne1"
+              >
+                <a
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseOne1"
+                  aria-expanded="false"
+                  aria-controls="collapseOne1"
+                >
+                  <h5 class="mb-0">1. Tổng số dương</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseOne1"
+                class="collapse show"
+                role="tabpanel"
+                aria-labelledby="headingOne1"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai1()">
+                    Tính tổng
+                  </button>
+                  <div class="alert alert-primary" id="Bai1"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 2-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingTwo2"
+              >
+                <a
+                  class="collapsed"
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseTwo2"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo2"
+                >
+                  <h5 class="mb-0">2. Đếm số dương</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseTwo2"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo2"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai2()">
+                    Đếm số
+                  </button>
+                  <div class="alert alert-primary" id="Bai2"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 3-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingOne3"
+              >
+                <a
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseOne3"
+                  aria-expanded="false"
+                  aria-controls="collapseOne3"
+                >
+                  <h5 class="mb-0">3. Tìm số nhỏ nhất</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseOne3"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingOne3"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai3()">
+                    Tìm số nhỏ nhất
+                  </button>
+                  <div class="alert alert-primary" id="Bai3"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 4-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingTwo4"
+              >
+                <a
+                  class="collapsed"
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseTwo4"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo4"
+                >
+                  <h5 class="mb-0">4. Tìm số dương nhỏ nhất</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseTwo4"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo4"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai4()">
+                    Tìm số dương nhỏ nhất
+                  </button>
+                  <div class="alert alert-primary" id="Bai4"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 5-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingOne5"
+              >
+                <a
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseOne5"
+                  aria-expanded="false"
+                  aria-controls="collapseOne5"
+                >
+                  <h5 class="mb-0">5. Tìm số chẵn cuối cùng</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseOne5"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingOne5"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai5()">
+                    Tìm số chẵn cuối cùng
+                  </button>
+                  <div class="alert alert-primary" id="Bai5"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 6 -->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingTwo6"
+              >
+                <a
+                  class="collapsed"
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseTwo6"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo6"
+                >
+                  <h5 class="mb-0">6. Đổi chỗ</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseTwo6"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo6"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <div class="form-group row">
+                    <input
+                      type="number"
+                      id="viTri1"
+                      class="form-control col-4 ml-3 mr-4"
+                      placeholder="Nhập số vị trí thứ 1"
+                    />
+                    <input
+                      type="number"
+                      id="viTri2"
+                      class="form-control col-4"
+                      placeholder="Nhập số vị trí thứ 2"
+                    />
+                  </div>
+                  <button class="btn btn-primary mb-3" onclick="Bai6()">
+                    Đổi chỗ
+                  </button>
+                  <div class="alert alert-primary" id="Bai6"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 7-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingOne7"
+              >
+                <a
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseOne7"
+                  aria-expanded="false"
+                  aria-controls="collapseOne7"
+                >
+                  <h5 class="mb-0">7. Sắp xếp tăng dần</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseOne7"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingOne7"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai7()">
+                    Sắp xếp
+                  </button>
+                  <div class="alert alert-primary" id="Bai7"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 8-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingTwo8"
+              >
+                <a
+                  class="collapsed"
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseTwo8"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo8"
+                >
+                  <h5 class="mb-0">8. Tìm số nguyên tố đầu tiên</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseTwo8"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo8"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai8()">
+                    Tìm số nguyên tố
+                  </button>
+                  <div class="alert alert-primary" id="Bai8"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion card 9-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingOne9"
+              >
+                <a
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseOne9"
+                  aria-expanded="false"
+                  aria-controls="collapseOne9"
+                >
+                  <h5 class="mb-0">9. Đếm số nguyên</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseOne9"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingOne9"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <div class="form-group w-50">
+                    <input
+                      type="text"
+                      name=""
+                      id="number9"
+                      class="form-control mb-3"
+                      placeholder="Nhập số"
+                    />
+                    <div class="text-center">
+                      <button class="btn btn-primary" onclick="Bai9themso()">
+                        Thêm số
+                      </button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" id="themSobai9"></div>
+                  <button class="btn btn-primary mb-3" onclick="Bai9()">
+                    Đếm số nguyên
+                  </button>
+                  <div class="alert alert-primary" id="Bai9"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Accordion card 10-->
+            <div class="card">
+              <!-- Card header -->
+              <div
+                class="card-header alert-primary"
+                role="tab"
+                id="headingTwo10"
+              >
+                <a
+                  class="collapsed"
+                  data-toggle="collapse"
+                  data-parent="#accordionEx"
+                  href="#collapseTwo10"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo10"
+                >
+                  <h5 class="mb-0">10. So sánh số lượng số âm và dương</h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div
+                id="collapseTwo10"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo10"
+                data-parent="#accordionEx"
+              >
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" onclick="Bai10()">
+                    So sánh
+                  </button>
+                  <div class="alert alert-primary" id="Bai10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion wrapper -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
